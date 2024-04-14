@@ -6,42 +6,43 @@
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Agrega tus estilos CSS personalizados aquí -->
+    <link rel="stylesheet" href="css/carrito.css">
     <style>
-        /* Estilos personalizados */
-        body {
-            background-color: #f2f2f2; /* Color gris claro */
-        }
-        .product {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        /* Agrega más estilos según tus preferencias */
-    </style>
+    html, body {
+        height: 100%;
+    }
+    
+    body {
+        background-image: url('img/elegant-black-background-3194.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+    }</style>
+ 
 </head>
 <body>
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8">
-                <h1>Carrito de Compras</h1>
+                <h1 class="mb-4">Carrito de Compras</h1>
                 <div class="product">
                     <img src="product1.jpg" alt="Producto 1">
                     <h2>Nombre del Producto 1</h2>
-                    <p>Precio: $10</p>
+                    <p>Precio: $100.000</p>
                     <input type="number" value="1">
                 </div>
                 <div class="product">
                     <img src="product2.jpg" alt="Producto 2">
                     <h2>Nombre del Producto 2</h2>
-                    <p>Precio: $15</p>
+                    <p>Precio: $150.000</p>
                     <input type="number" value="1">
                 </div>
                 <!-- Agrega más productos aquí -->
             </div>
             <div class="col-md-4">
-                <h2>Total del Carrito</h2>
+                <h2 class="mb-4">Total del Carrito</h2>
                 <p id="total">$0</p>
-                <button class="btn btn-primary">Comprar</button>
+                <button class="btn btn-primary btn-block mt-3">Comprar</button>
             </div>
         </div>
     </div>

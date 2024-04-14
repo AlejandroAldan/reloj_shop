@@ -46,3 +46,12 @@ a {
 a:hover {
     text-decoration: underline;
 }
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('img/elegant-black-background-3194.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
