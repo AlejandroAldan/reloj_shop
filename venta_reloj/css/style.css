@@ -55,3 +55,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.navbar navbar-dark bg-dark shadow-sm{
+    background-color: #0F2027;
+}

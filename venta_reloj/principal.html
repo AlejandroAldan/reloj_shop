@@ -7,36 +7,39 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Carousel Template · Bootstrap v5.3</title>
+    <link rel="shortcut icon" href="img/reloj-de-pared.png" type="image/x-icon">
+    <title> Inicio </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 <link href="bootstrap-5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+/* Cambiar color del fondo de la barra de navegación */
 .bg-dark {background-color: #DFAC00}
+/* Cambiar color del texto de la marca de navegación */
 .navbar-brand {color: #000}
-.navbar-nav .nav-link {background-color: ""}
+/* Cambiar color del fondo de los enlaces de navegación */
+.navbar-nav .nav-link {background-color: #000""}
+/* Cambiar color del texto de los enlaces de navegación */
 .navbar-nav .nav-link {color: ""}
-.form-control {  background-color: #898989 }
-.btn-outline-success {color:  rgb(226, 173, 0);border-color: rgb(255, 115, 0);}
+
+/* Cambiar color del fondo del botón de búsqueda */
+.form-control {  background-color: #868686d0 }
+/* Cambiar color del texto del botón de búsqueda */
+.btn-outline-success {color:  rgb(255, 255, 255);border-color: rgb(255, 255, 255);}
 body {
-    background-image: url('img/fondo_reloj.jpg');background-size: cover;background-repeat: no-repeat; }
-.bd-placeholder-img {font-size: 1.125rem;text-anchor: middle;-webkit-user-select: none;-moz-user-select: none;user-select: none;}
-      @media (min-width: 768px) {.bd-placeholder-img-lg {font-size: 3.5rem; }}
-      .b-example-divider {width: 100%;height: 3rem;background-color: rgba(0, 0, 0, .1);border: solid rgba(0, 0, 0, .15);border-width: 1px 0; box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);}
-      .b-example-vr {flex-shrink: 0;width: 1.5rem;height: 100vh;}
-      .bi {vertical-align: -.125em;fill: currentColor;}
-      .nav-scroller {position: relative; z-index: 2;height: 2.75rem; overflow-y: hidden; }
-      .nav-scroller .nav {display: flex;flex-wrap: nowrap;padding-bottom: 1rem;margin-top: -1px;overflow-x: auto;text-align: center;white-space: nowrap; -webkit-overflow-scrolling: touch;}
-
-      .btn-bd-primary { --bd-violet-bg: #712cf9;--bd-violet-rgb: 112.520718, 44.062154, 249.437846; --bs-btn-font-weight: 600;--bs-btn-color: var(--bs-white); --bs-btn-bg: var(--bd-violet-bg); --bs-btn-border-color: var(--bd-violet-bg);--bs-btn-hover-color: var(--bs-white); --bs-btn-hover-bg: #6528e0; --bs-btn-hover-border-color: #6528e0;--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);--bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8; }
-      .bd-mode-toggle { z-index: 1500; }
-
-      .bd-mode-toggle .dropdown-menu .active .bi { display: block !important; }
+  background-image: url(img/fondo_reloj.jpg);
+        color: #FFFFFF; /* Color de texto principal */
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif/* Cambia la fuente a Arial */
+      }
+      .bg-dark { background-color: #dad6d6; } /* Color de fondo de la barra de navegación */
+      .navbar-brand { color: #FFFFFF; } /* Color de texto de la marca de navegación */
+      .navbar-nav .nav-link { color: #FFFFFF; } /* Color de texto de los enlaces de navegación */
+      .form-control { background-color: #ffffff; color: #FFFFFF; } /* Color del botón de búsqueda */
+      .btn-outline-success { color: #FFFFFF; border-color: #FFFFFF; } /* Estilo del botón de búsqueda */
+      .btn-outline-success:hover { background-color: #FFFFFF; color: #000000; } /* Cambio de color al pasar el mouse */
     </style>  
-
+    <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
     <script src="JQ/jquery-3.7.1.min.js"></script> 
   </head>
@@ -58,6 +61,13 @@ body {
     </svg>
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <!--BOTON DE TEMA-->
+      <!--<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
         <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>-->
@@ -85,10 +95,12 @@ body {
         </li>
       </ul>
     </div>
+
+    
 <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-yellow-dark">
     <style>  .bg-yellow-dark {
-      background-image: url('img/azul_barra.png'); 
+      background-color: #0F2027; 
   }
   </style>
   
@@ -132,6 +144,13 @@ body {
 <main>
 
   <div id="myCarousel" class="carousel slide mb-6 carousel-fade" data-bs-ride="carousel">
+   <!--<div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>--> 
+
+    <!-- PANTALLA PRINCIPAL----------------------------------------------------------------------------------------------- -->
     <div id="myCarousel" class="carousel slide mb-6 carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
           <div class="carousel-item active">
@@ -140,41 +159,42 @@ body {
               </div>
               <div class="container">
                   <div class="carousel-caption text-start">
-                      <h1>NUEVO RELOJJJ OHHHMI GADD</h1>
-                      <p class="opacity-75">Sumérgete en el encanto del tiempo con nuestro último reloj, 
-                      una obra maestra de elegancia y funcionalidad. Diseñado para los que aprecian la belleza en cada momento, 
-                      este reloj combina la precisión suiza con un estilo contemporáneo que cautiva a la vista y deleita los sentidos.</p>
                       <p><a class="btn btn-lg btn-primary" href="#">COMPRAR AHORA</a></p>
                   </div>
               </div>
-          </div>      
+          </div>
+
+
+
+          
           <div class="carousel-item">
               <div style="position: relative; width: 100%; height: 100%;">
                   <img src="img/seiko_reloj.jpg" alt="Imagine" style="object-fit: cover; width: 100%; height: 100%;">
               </div>
               <div class="container">
                   <div class="carousel-caption text-start">
-                      <h1>EL RELOJ DE TU VIDAAA</h1>
-                      <p>OHHH el nuevo reloj a llegado compralo ahora o tu gato se muere</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">COMPRAR AHORA</a></p>
+                      <p><a class="btn btn-lg btn-primary" style= "color: #c0c0c0;" href="#">COMPRAR AHORA</a></p>
                   </div>
               </div>
-          </div>     
+          </div>
+
+
+
+          
           <div class="carousel-item">
               <div style="position: relative; width: 100%; height: 100%;">
                   <img src="img/gshock (2).jpg" alt="Imagine" style="object-fit: cover; width: 100%; height: 100%;">
               </div>
               <div class="container">
                   <div class="carousel-caption text-start">
-                      <h1>VUELVE AL FUTURO CON ESTE RELOJ</h1>
-                      <p>¡Viaja al futuro con estilo con el reloj Casio inspirado en "Volver al Futuro"! Con un diseño futurista y características avanzadas, 
-                      este reloj te llevará directamente a la era de Marty McFly. ¡No te pierdas la oportunidad de
-                      ser parte de la aventura temporal con el reloj Casio "Volver al Futuro"!</p>
-                      <p><a class="btn btn-lg btn-primary" href="#">COMPRAR AHORA</a></p>
+                      <p><a class="btn btn-lg btn-primary" style="color: #c0c0c0;" href="#">COMPRAR AHORA</a></p>
                   </div>
               </div>
           </div>
       </div>
+
+      
+      <!-- BOTONES DEL CARRUSEL -->
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -184,14 +204,14 @@ body {
           <span class="visually-hidden">Next</span>
       </button>
   </div>
-<br>
-<br>
-  <div class="container marketing">
-        <br><br><br>
- 
-     <h1 class="text-center mb-5" style="color: #DFAC00;">NUESTRAS MARCAS</h1>
-     <br><br><br>
 
+<br>
+<br>
+
+  <div class="container marketing">
+    
+        <br><br><br>
+     <!-- CIRCULOS DE LA PAGINA -->
       <div class="row">
     <div class="row">
 
@@ -203,7 +223,7 @@ body {
             cx="70" 
             cy="70" 
             r="70" 
-            style="stroke: #DED000 ; 
+            style="stroke: #b2d10067 ; 
             stroke-width: 5px;" />
 
             <circle 
@@ -229,16 +249,22 @@ body {
 
 
         <p><a class="btn btn-secondary" href="venta.html">MAS &raquo;</a></p>
-    </div>   
-    <div class="col-lg-4">
+    </div>
+      <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+      
+      <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CASIO" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>CASIO</title>
             <circle 
             cx="70" 
             cy="70" 
             r="70" 
-            style="stroke: #0084D9; 
+            style="stroke: #0084D9;
+            font-family: Georgia, 'Times New Roman', Times, serif; 
             stroke-width: 5px;" />
+
+
             <circle 
             cx="70" 
             cy="70" 
@@ -246,31 +272,41 @@ body {
             fill="none" 
             stroke="var(--bs-secondary-color)" 
             stroke-width="0"/>
+
+
             <image 
             href="img/casio_logo.png" 
             x="18" 
             y="17" 
             width="110" 
             height="110" />
+
+
         </svg>
         <h2 
         class="fw-normal" 
-        style="color: #0038d1da;">CASIO</h2>
+        style="color: #0084D9;">CASIO</h2>
 
         <p style="color: #ffffff;">¡Descubre la precisión y el estilo incomparables con los relojes Casio! Desde clásicos atemporales hasta innovadores modelos deportivos y elegantes, 
           Casio ofrece la combinación perfecta de funcionalidad y moda.</p>
 
         <p><a class="btn btn-secondary" href="venta2.html">MAS &raquo;</a></p>
-    </div>   
+    </div>
+
+
+      
     <div class="col-lg-4">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+
           <title>Placeholder</title>
+
           <circle 
           cx="70" 
           cy="70" 
           r="70" 
           style="stroke: #919191; 
           stroke-width: 5px;" />
+
           <circle 
           cx="70" 
           cy="70" 
@@ -278,6 +314,7 @@ body {
           fill="none" 
           stroke="var(--bs-secondary-color)" 
           stroke-width="0"/>
+
           <image 
           href="img/seiko_logo.png" 
           x="18" 
@@ -285,9 +322,12 @@ body {
           width="110" 
           height="110" />
       </svg>
-      <h2 class="fw-normal" style="color: #8b8b8b;">SEIKO</h2>
-     <p style="color: #ffffff;">Eleva tu estilo con la elegancia y la precisión de Seiko! Descubre una gama incomparable de relojes que fusionan la artesanía japonesa con la innovación tecnológica. 
+
+      <h2 class="fw-normal" style="color: #919191;">SEIKO</h2>
+
+      <p style="color: #ffffff;">Eleva tu estilo con la elegancia y la precisión de Seiko! Descubre una gama incomparable de relojes que fusionan la artesanía japonesa con la innovación tecnológica. 
         Desde los icónicos modelos automáticos hasta los sofisticados relojes de buceo y cronógrafos de alta gama.</p>
+
         <p><a class="btn btn-secondary" href="#">MAS &raquo;</a></p>
   </div>
 </div>
@@ -347,7 +387,7 @@ body {
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1" style="color: #DED000;">ROLEX GMT <BR><BR>OFERTA $159.990<BR><BR><span class="text-body-secondary"></span></h2>
+        <h2 class="featurette-heading fw-normal lh-1" style="color: #b2d10067;">ROLEX GMT <BR><BR>OFERTA $159.990<BR><BR><span class="text-body-secondary"></span></h2>
         <p style="color: #ffffff; "class="lead">
           ¡Tiempo de clase mundial a un precio excepcional! Descubre la elegancia y la precisión del Rolex GMT en oferta. Con su diseño icónico y su reputación de excelencia suiza, 
           el Rolex GMT es el compañero perfecto para los viajeros globales y los amantes del lujo. Aprovecha esta oportunidad única para obtener un reloj que marque tu estilo y estatus a un precio exclusivo.
@@ -370,7 +410,7 @@ body {
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1" style="color: #c0c0c0;">SEIKO 5 <BR><BR>OFERTA $87.990<BR><BR><span class="text-body-secondary"></span></h2>
+        <h2 class="featurette-heading fw-normal lh-1" style="color: #919191;">SEIKO 5 <BR><BR>OFERTA $87.990<BR><BR><span class="text-body-secondary"></span></h2>
         <p class="lead" style="color: #ffffff;">
           ¡El clásico moderno que necesitas a un precio irresistible! Descubre la combinación perfecta de estilo y funcionalidad con el Seiko 5 en oferta. 
           Con su diseño atemporal y su legendaria fiabilidad, el Seiko 5 es más que un reloj, es una declaración de tu estilo de vida dinámico y sofisticado. 
