@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regístrate</title>
-    <!-- Incluye los archivos de Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"> 
     <style>
         html, body {
             height: 100%;
         }
-
-        body {
-            background-image: url('img/elegant-black-background-3194.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+        body {background-image: url('img/elegant-black-background-3194.jpg'); background-size: cover;background-repeat: no-repeat;}
     </style>
-    <script src="JQ/jquery-3.7.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
 </head>
 <body>
     <div class="container mt-5">
@@ -27,26 +22,31 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h4 class="card-title text-center mb-4">Regístrate</h4>
-                        <form>
+                        <form id="registerForm" action="procesar_registro.php" method="POST">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                                <div id="nombreError" class="invalid-feedback"></div>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo">
+                                <div id="emailError" class="invalid-feedback"></div>
                             </div>
                             <div class="mb-3">
                                 <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control" id="fecha_nacimiento">
+                                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+                                <div id="fechaNacimientoError" class="invalid-feedback"></div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña">
+                                <div id="passwordError" class="invalid-feedback"></div>
                             </div>
                             <div class="mb-3">
                                 <label for="confirm_password" class="form-label">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" id="confirm_password" placeholder="Confirma tu contraseña">
+                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirma tu contraseña">
+                                <div id="confirmPasswordError" class="invalid-feedback"></div>
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
@@ -60,7 +60,67 @@
             </div>
         </div>
     </div>
-    <!-- Incluye los archivos de Bootstrap JavaScript -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#registerForm').submit(function(e){
+                e.preventDefault();           
+                var nombre = $('#nombre').val();
+                var email = $('#email').val();
+                var fechaNacimiento = $('#fecha_nacimiento').val();
+                var password = $('#password').val();
+                var confirmPassword = $('#confirm_password').val();
+                var valid = true;
+                if(nombre.trim() === ''){
+                    $('#nombre').addClass('is-invalid');
+                    $('#nombreError').text('El nombre es obligatorio.');
+                    valid = false;
+                } else {
+                    $('#nombre').removeClass('is-invalid');
+                    $('#nombreError').text('');
+                }
+                if(email.trim() === ''){
+                    $('#email').addClass('is-invalid');
+                    $('#emailError').text('El correo electrónico es obligatorio.');
+                    valid = false;
+                } else {
+                    $('#email').removeClass('is-invalid');
+                    $('#emailError').text('');
+                }
+                if(fechaNacimiento.trim() === ''){
+                    $('#fecha_nacimiento').addClass('is-invalid');
+                    $('#fechaNacimientoError').text('La fecha de nacimiento es obligatoria.');
+                    valid = false;
+                } else {
+                    $('#fecha_nacimiento').removeClass('is-invalid');
+                    $('#fechaNacimientoError').text('');
+                }
+                if(password.trim() === ''){
+                    $('#password').addClass('is-invalid');
+                    $('#passwordError').text('La contraseña es obligatoria.');
+                    valid = false;
+                } else {
+                    $('#password').removeClass('is-invalid');
+                    $('#passwordError').text('');
+                }
+                if(confirmPassword.trim() === ''){
+                    $('#confirm_password').addClass('is-invalid');
+                    $('#confirmPasswordError').text('Por favor, confirma tu contraseña.');
+                    valid = false;
+                } else if(password !== confirmPassword){
+                    $('#confirm_password').addClass('is-invalid');
+                    $('#confirmPasswordError').text('Las contraseñas no coinciden.');
+                    valid = false;
+                } else {
+                    $('#confirm_password').removeClass('is-invalid');
+                    $('#confirmPasswordError').text('');
+                }
+                if(valid){
+                    this.submit();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
