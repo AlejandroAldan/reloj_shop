@@ -7,12 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Casio Time'S</title>
-    <link rel="shortcut icon" href="img/reloj-de-pared.png" type="image/x-icon">
+    <title>Album example · Bootstrap v5.3</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    <link rel="stylesheet" href="jquery-3.7.1.min.js">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -91,182 +95,244 @@
         display: block !important;
       }
     </style>
-  <script src="JQ/jquery-3.7.1.min.js"></script>  
+
+    
   </head>
-  <body style="background-color: rgba(0, 0, 0, .1);">    
-<header data-bs-theme="dark">
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-        <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="img/casio_logo.png" alt="CASIO" style="height: 2em; margin-right: 0.5em;">
-            <strong style="color: rgb(0, 130, 216);"></strong>
-        </a>
-      
-    </div>
-</div>
-</header>
+  <body style="background-image: url('img/casio\ wallpaper.jpg');">
+   
 
-<main>
-  <div class="album py-5 bg-body-tertiary" style="background-color: rgba(255, 255, 255, 0.5);">
-    <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-            <div style="background-image: url(img/shopping\ \(9\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">RELOJ CASIO QUARTZ HOMBRE ORIGINAL MW-2401-</p> <h4>$30.990</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                  
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito de Compras</h5>
+          <div class="offcanvas-body">
+            <ul id="compras" class="list-group"></ul>
+            <p>Total: <span id="total">$0.00</span></p>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-            
-            <div style="background-image: url(img/shopping\ \(11\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            
-            <div class="card-body">
-              <p class="card-text">Reloj G-Shock Hombre GA-B2100-3ADR</p><h4>$23.990</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-
-                </div>-
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-            
-            <div style="background-image: url(img/shopping\ \(10\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            
-            <div class="card-body" >
-              <p class="card-text">CASIO Pantalla Táctil Deportes Reloj Electrónico Impermeable Estudiante LED Moda Casual Hit </p><h4>$20.990</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                 
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div style="background-image: url(img/shopping\ \(12\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">Reloj Casio MW-240-7BV Hombre</p><h4>$50.990</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                 
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div style="background-image: url(img/shopping\ \(13\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">Reloj Casio Vintage W-218H-4B2VDF Correa Naranja</p><h4>$50.000</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                  
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div style="background-image: url(img/shopping\ \(14\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">Reloj Casio G-Shock "Casioak" GA-2100RGB-1A Carbon Core</p><br><h4>$30.990</h4><br>
-
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-               
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div style="background-image: url(img/shopping\ \(15\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">Reloj Casio Hombre MTP-VT01GL-2B2UDF</p><h4>$30.000</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div style="background-image: url(img/shopping\ \(16\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">Reloj G-Shock Hombre GG-B100-1ADR</p><h4>$50.000</h4>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div style="background-image: url(img/shopping\ \(17\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-            <div class="card-body">
-              <p class="card-text">Reloj G-Shock Hombre GA-2100BP-1ADR</p><h4>$38.900</h4><br>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">COMPRAR</button>
-                </div>
-                <small class="text-body-secondary"></small>
-              </div>
-            </div>
-          </div>
-        </div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-    </div>
+     
+</div>
+      <div class="offcanvas-body">
+          <ul id="compras"></ul>
+      </div>
   </div>
 
-</main>
+  <header data-bs-theme="dark">
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                  <img src="img/casio_logo.png" alt="CASIO" style="height: 2em; margin-right: 0.5em;">
+                  
+              </a>
+              <button class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: #577eff; color: #0F2027; border-color: #577eff;">
+                  Carrito
+              </button>
+          </div>
+      </div>
+  </header>
 
-<footer class="text-body-secondary py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
+  <main>
+      <div class="album py-5 bg-body-tertiary" style="background-color: rgba(255, 255, 255, 0.5);">
+          <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  <div class="col">
+                      <div class="card shadow-sm">
+                          <div style="background-image: url(img/shopping\ \(9\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                          <div class="card-body">
+                              <p class="card-text">RELOJ CASIO QUARTZ HOMBRE ORIGINAL MW-2401-</p>
+                              <h4>$30.990</h4>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="RELOJ CASIO QUARTZ HOMBRE ORIGINAL MW-2401-" data-precio="30990">
+                                          COMPRAR
+                                      </button>
+                                  </div>
+                                  <small class="text-body-secondary"></small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                        <div style="background-image: url(img/shopping\ \(12\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                        <div class="card-body">
+                            <p class="card-text">Reloj Casio MW-240-7BV Hombre</p>
+                            <h4>$50.990</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Casio MW-240-7BV Hombre" data-precio="50990">
+                                        COMPRAR
+                                    </button>
+                                </div>
+                                <small class="text-body-secondary"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                      <div style="background-image: url(img/shopping\ \(13\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                      <div class="card-body">
+                          <p class="card-text">Reloj Casio Vintage W-218H-4B2VDF Correa Naranja</p>
+                          <h4>$50.000</h4>
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Casio Vintage W-218H-4B2VDF Correa Naranja" data-precio="50000">
+                                      COMPRAR
+                                  </button>
+                              </div>
+                              <small class="text-body-secondary"></small>
+                          </div>
+                      </div>
+                  </div>
+              </div> 
+              <div class="col">
+                <div class="card shadow-sm">
+                    <div style="background-image: url(img/shopping\ \(14\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                    <div class="card-body">
+                        <p class="card-text">Reloj Casio G-Shock "Casioak" GA-2100RGB-1A Carbon Core</p>
+                        <h4>$30.990</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Casio G-Shock 'Casioak' GA-2100RGB-1A Carbon Core" data-precio="30990">
+                                    COMPRAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                  <div style="background-image: url(img/shopping\ \(15\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                  <div class="card-body">
+                      <p class="card-text">Reloj Casio Hombre MTP-VT01GL-2B2UDF</p>
+                      <h4>$30.000</h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Casio Hombre MTP-VT01GL-2B2UDF" data-precio="30000">
+                                  COMPRAR
+                              </button>
+                          </div>
+                          <small class="text-body-secondary"></small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+                <div style="background-image: url(img/shopping\ \(16\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                <div class="card-body">
+                    <p class="card-text">Reloj G-Shock Hombre GG-B100-1ADR</p>
+                    <h4>$50.000</h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj G-Shock Hombre GG-B100-1ADR" data-precio="50000">
+                                COMPRAR
+                            </button>
+                        </div>
+                        <small class="text-body-secondary"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <div style="background-image: url(img/shopping\ \(17\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+              <div class="card-body">
+                  <p class="card-text">Reloj G-Shock Hombre GA-2100BP-1ADR</p>
+                  <h4>$38.900</h4><br>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj G-Shock Hombre GA-2100BP-1ADR" data-precio="38900">
+                              COMPRAR
+                          </button>
+                      </div>
+                      <small class="text-body-secondary"></small>
+                  </div>
+              </div>
+          </div>
+      </div>
+           <div class="col">
+                    <div class="card shadow-sm">
+                      <div style="background-image: url(img/shopping\ \(11\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                        <div class="card-body">
+                              <p class="card-text">Reloj G-Shock Hombre GA-B2100-3ADR</p>
+                              <h4>$23.990</h4>
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj G-Shock Hombre GA-B2100-3ADR" data-precio="23990">
+                                          COMPRAR
+                                      </button>
+                                  </div>
+                                  <small class="text-body-secondary"></small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                        <div style="background-image: url(img/shopping\ \(10\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
+                        <div class="card-body">
+                            <p class="card-text">CASIO Pantalla Táctil Deportes Reloj Electrónico Impermeable Estudiante LED Moda Casual Hit</p>
+                            <h4>$20.990</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="CASIO Pantalla Táctil Deportes Reloj Electrónico Impermeable Estudiante LED Moda Casual Hit" data-precio="20990">
+                                        COMPRAR
+                                    </button>
+                                </div>
+                                <small class="text-body-secondary"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </main>
+
+  <footer class="text-body-secondary py-5">
+      <div class="container">
+          <p class="float-end mb-1">
+              <a href="#">Volver arriba</a>
+          <p class="mb-0">¿Nuevo en Bootstrap? <a href="/">Visita la página de inicio</a> o lee nuestra <a href="../getting-started/introduction/">guía de inicio</a>.</p>
+      </div>
+  </footer>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const botonesComprar = document.querySelectorAll(".btn-comprar");
+        let total = 0;
+
+        botonesComprar.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var nombre = btn.dataset.nombre;
+                var precio = parseFloat(btn.dataset.precio);
+                total += precio; // Suma el precio al total
+                agregarAlCarrito(nombre, precio);
+                actualizarTotal(total);
+            });
+        });
+    });
+
+    function agregarAlCarrito(nombre, precio) {
+        var item = document.createElement("li");
+        item.textContent = nombre + " - $" + precio.toFixed(2); // Formatea el precio con dos decimales
+        item.classList.add("list-group-item");
+        document.getElementById("compras").appendChild(item);
+    }
+
+    function actualizarTotal(total) {
+        document.getElementById("total").textContent = "$" + total.toFixed(2); // Formatea el total con dos decimales
+    }
+</script>
+
+
 </footer>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
