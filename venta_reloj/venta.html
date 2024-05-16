@@ -7,11 +7,12 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.122.0">
-  <title>Album example · Bootstrap v5.3</title>
+  <title>Casio Time'S</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
   <link rel="stylesheet" href="jquery-3.7.1.min.js">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/reloj-de-pared.png" type="image/x-icon">
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -35,7 +36,7 @@
       <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito de Compras</h5>
       <div class="offcanvas-body">
         <ul id="compras" class="list-group"></ul>
-        <p>Total: <span id="total">$0.00</span></p>
+        <p>Total: <span id="total">$0.00 CLP</span></p>
     </div>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
@@ -57,22 +58,14 @@
         <a href="#" class="navbar-brand d-flex align-items-center">
           <img src="img/Logo_da_Rolex.png" alt="ROLEX" style="height: 2em; margin-right: 0.5em;">
         </a>
-        <button class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: rgb(79, 173, 79); border-color: rgb(79, 173, 79); color: rgb(230, 233, 58);    ">
+        <button class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="background-color: rgb(79, 173, 79); border-color: rgb(79, 173, 79); color: rgb(230, 233, 58);">
           Carrito
         </button>
+        <button id="btn-cambiodolar" class="btn btn-secondary" style="margin-left: 10px;">Ver en Dolares</button>
       </div>
     </div>
   </header>
   <main>
-    <div class="album py-5 bg-body-tertiary" style="background-color: rgba(255, 255, 255, 0.5);">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        </div>
-      </div>
-    </div>
-  </main>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
     <div class="album py-5 bg-body-tertiary" style="background-color: rgba(255, 255, 255, 0.5);">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -81,7 +74,7 @@
               <div style="background-image: url(img/shopping.webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
                 <p class="card-text">Rolex GMT-Master 1 : 1 Calidad premium (Caja Completa)</p>
-                <h4>$139.990</h4>
+                <h4 data-precio="139990">$139.990 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Rolex GMT-Master" data-precio="139990">
@@ -98,7 +91,7 @@
               <div style="background-image: url(img/shopping\ \(1\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
                 <p class="card-text">Reloj GMT-Master II de 40mm</p>
-                <h4>$123.990</h4>
+                <h4 data-precio="123990">$123.990 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj GMT-Master II" data-precio="123990">
@@ -115,7 +108,7 @@
               <div style="background-image: url(img/shopping\ \(2\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
                 <p class="card-text">Reloj Submariner</p>
-                <h4>$389.990</h4>
+                <h4 data-precio="389990">$389.990 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Submariner" data-precio="389990">
@@ -132,7 +125,7 @@
               <div style="background-image: url(img/shopping\ \(3\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
                 <p class="card-text">Reloj automático Rolex GMT-Master 16750 7,4 serie 1982 Pepsi pátina 40 mm</p>
-                <h4>$250.990</h4>
+                <h4 data-precio="250990">$250.990 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj GMT-Master 16750" data-precio="250990">
@@ -149,7 +142,7 @@
               <div style="background-image: url(img/shopping\ \(4\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
                 <p class="card-text">Rolex GMT-Master II Series m126720vtnr-0002 Reloj Mecánico Automático</p>
-                <h4>$150.000</h4>
+                <h4 data-precio="150000">$150.000 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Rolex GMT-Master II Series" data-precio="150000">
@@ -165,62 +158,11 @@
             <div class="card shadow-sm">
               <div style="background-image: url(img/shopping\ \(5\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
-                <p class="card-text">Reloj GMT-Master de 40mm</p>
-                <h4>$230.990</h4>
+                <p class="card-text">Reloj Mecánico Automático Rolex Explorer m124273-0001</p>
+                <h4 data-precio="157000">$157.000 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj GMT-Master" data-precio="230990">
-                      COMPRAR
-                    </button>
-                  </div>
-                  <small class="text-body-secondary"></small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <div style="background-image: url(img/shopping\ \(6\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-              <div class="card-body">
-                <p class="card-text">Reloj Rolex GMT-Master II 40 mm bisel de cerámica negro acero</p>
-                <h4>$230.000</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Rolex GMT-Master II" data-precio="230000">
-                      COMPRAR
-                    </button>
-                  </div>
-                  <small class="text-body-secondary"></small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <div style="background-image: url(img/shopping\ \(7\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-              <div class="card-body">
-                <p class="card-text">Reloj Rolex GMT Master II 50th Anniversary Batman de 40mm</p>
-                <h4>$150.000</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj Rolex GMT Master II" data-precio="150000">
-                      COMPRAR
-                    </button>
-                  </div>
-                  <small class="text-body-secondary"></small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <div style="background-image: url(img/shopping\ \(8\).webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
-              <div class="card-body">
-                <p class="card-text">Reloj ROLEX RX 33mm datejust jubile</p>
-                <h4>$138.900</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Reloj ROLEX RX" data-precio="138900">
+                    <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Rolex Explorer" data-precio="157000">
                       COMPRAR
                     </button>
                   </div>
@@ -232,34 +174,66 @@
         </div>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const botonesComprar = document.querySelectorAll(".btn-comprar");
-          let total = 0;
-  
-          botonesComprar.forEach(function (btn) {
-              btn.addEventListener("click", function () {
-                  var nombre = btn.dataset.nombre;
-                  var precio = parseFloat(btn.dataset.precio);
-                  total += precio; // Suma el precio al total
-                  agregarAlCarrito(nombre, precio);
-                  actualizarTotal(total);
-              });
-          });
-      });
-  
-      function agregarAlCarrito(nombre, precio) {
-          var item = document.createElement("li");
-          item.textContent = nombre + " - $" + precio.toFixed(2); // Formatea el precio con dos decimales
-          item.classList.add("list-group-item");
-          document.getElementById("compras").appendChild(item);
-      }
-  
-      function actualizarTotal(total) {
-          document.getElementById("total").textContent = "$" + total.toFixed(2); // Formatea el total con dos decimales
-      }
-  </script>
-  
+  </main>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const botonesComprar = document.querySelectorAll(".btn-comprar");
+        const toggleCurrencyBtn = document.getElementById("btn-cambiodolar");
+        let total = 0;
+        let conversionRate = 0.0013; 
+        let isCLP = true; 
+
+       
+        fetch('https://api.exchangerate-api.com/v4/latest/CLP')
+          .then(response => response.json())
+          .then(data => {
+            conversionRate = data.rates.USD;
+          })
+          .catch(error => {
+            console.error('Error fetching conversion rate:', error);
+          });
+
+        botonesComprar.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var nombre = btn.dataset.nombre;
+                var precio = parseFloat(btn.dataset.precio);
+                total += precio; 
+                agregarAlCarrito(nombre, precio);
+                actualizarTotal(total);
+            });
+        });
+
+        toggleCurrencyBtn.addEventListener("click", function () {
+            isCLP = !isCLP;
+            actualizarPrecios();
+        });
+
+        function agregarAlCarrito(nombre, precio) {
+            var item = document.createElement("li");
+            item.textContent = `${nombre} - $${precio.toFixed(2)} CLP`; 
+            item.classList.add("list-group-item");
+            document.getElementById("compras").appendChild(item);
+        }
+
+        function actualizarTotal(total) {
+            let displayTotal = isCLP ? total : total * conversionRate;
+            let currency = isCLP ? 'CLP' : 'USD';
+            document.getElementById("total").textContent = `$${displayTotal.toFixed(2)} ${currency}`; 
+        }
+
+        function actualizarPrecios() {
+            const precios = document.querySelectorAll('.card-body h4');
+            precios.forEach(precioElement => {
+                let precioCLP = parseFloat(precioElement.dataset.precio);
+                let precioUSD = precioCLP * conversionRate;
+                let displayPrice = isCLP ? precioCLP : precioUSD;
+                let currency = isCLP ? 'CLP' : 'USD';
+                precioElement.textContent = `$${displayPrice.toFixed(2)} ${currency}`;
+            });
+            actualizarTotal(total);
+        }
+    });
+  </script>
 </body>
 </html>
