@@ -74,7 +74,7 @@
               <div style="background-image: url(img/shopping.webp);background-size:cover;height: 225px;background-repeat: no-repeat;"></div>
               <div class="card-body">
                 <p class="card-text">Rolex GMT-Master 1 : 1 Calidad premium (Caja Completa)</p>
-                <h4 data-precio="139990">$139.990 CLP</h4>
+                <h4 data-precio="139990">$139 990 CLP</h4>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary btn-comprar" data-nombre="Rolex GMT-Master" data-precio="139990">
@@ -176,15 +176,15 @@
     </div>
   </main>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
         const botonesComprar = document.querySelectorAll(".btn-comprar");
         const toggleCurrencyBtn = document.getElementById("btn-cambiodolar");
         let total = 0;
-        let conversionRate = 0.0013; 
-        let isCLP = true; 
+        let conversionRate = 0.0013; // Tasa de conversión por defecto
+        let isCLP = true;
 
-       
         fetch('https://api.exchangerate-api.com/v4/latest/CLP')
           .then(response => response.json())
           .then(data => {
@@ -198,7 +198,7 @@
             btn.addEventListener("click", function () {
                 var nombre = btn.dataset.nombre;
                 var precio = parseFloat(btn.dataset.precio);
-                total += precio; 
+                total += precio;
                 agregarAlCarrito(nombre, precio);
                 actualizarTotal(total);
             });
@@ -211,29 +211,46 @@
 
         function agregarAlCarrito(nombre, precio) {
             var item = document.createElement("li");
-            item.textContent = `${nombre} - $${precio.toFixed(2)} CLP`; 
+            let displayPrice = isCLP ? precio : precio * conversionRate;
+            let roundedPrice = Math.round(displayPrice * 100) / 100; 
+            let currency = isCLP ? 'CLP' : 'USD'; // Definir la moneda aquí
+            item.textContent = `${nombre} - $${roundedPrice.toFixed(0)} ${currency}`;
             item.classList.add("list-group-item");
+            
+            // Botón de eliminación
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Eliminar";
+            deleteButton.classList.add("btn", "btn-sm", "btn-danger", "ms-2");
+            deleteButton.addEventListener("click", function () {
+                total -= precio; // Restar el precio eliminado del total
+                item.remove(); // Eliminar el elemento de la lista
+                actualizarTotal(total); // Actualizar el total mostrado
+            });
+            item.appendChild(deleteButton); // Agregar el botón de eliminación al elemento de la lista
+            
             document.getElementById("compras").appendChild(item);
         }
 
         function actualizarTotal(total) {
-            let displayTotal = isCLP ? total : total * conversionRate;
             let currency = isCLP ? 'CLP' : 'USD';
-            document.getElementById("total").textContent = `$${displayTotal.toFixed(2)} ${currency}`; 
+            let convertedTotal = isCLP ? total : total * conversionRate; 
+            document.getElementById("total").textContent = `Total: $${convertedTotal.toFixed(2)} ${currency}`;
         }
 
         function actualizarPrecios() {
             const precios = document.querySelectorAll('.card-body h4');
             precios.forEach(precioElement => {
                 let precioCLP = parseFloat(precioElement.dataset.precio);
-                let precioUSD = precioCLP * conversionRate;
-                let displayPrice = isCLP ? precioCLP : precioUSD;
+                let displayPrice = isCLP ? precioCLP : precioCLP * conversionRate;
                 let currency = isCLP ? 'CLP' : 'USD';
+                console.log(`Precio en ${currency}: ${displayPrice.toFixed(2)}`);
                 precioElement.textContent = `$${displayPrice.toFixed(2)} ${currency}`;
             });
+            console.log(`Total en CLP: ${total}`);
             actualizarTotal(total);
         }
     });
-  </script>
+</script>
+
 </body>
 </html>
